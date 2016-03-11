@@ -1,6 +1,6 @@
 //Require Stuff.
 var express = require('express');
-var bt = require('./bluetooth/bluetooth');
+var bluetooth = require('./bluetooth');
 
 //App Stuff.
 var app = express();
@@ -14,7 +14,7 @@ app.get('/',function (req, res){
   res.send('THIS IS A TEST!!');
 });
 
-app.use('/bluetooth', bt);
+app.use('/bluetooth', bluetooth);
 
 app.listen(PORT, function(){
   console.log('Test listening on port #(PORT)(5555)');

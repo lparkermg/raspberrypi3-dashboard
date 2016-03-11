@@ -2,6 +2,12 @@
 var express = require('express');
 var bt = express.Router();
 
+//Middleware stuffage
+bt.use(function timeLog(req,res,next){
+  console.log('Time: ', Date.now());
+  next();
+});
+
 //Main Stuff
 //Could probably do this better.
 bt.get('/', function(req, res){
@@ -14,7 +20,7 @@ bt.get('/status', function(req, res){
   console.log('Get the status of the bt module... Need to decide on what info to include.');
 });
 
-bt.get('/scan' function(req, res){
+bt.get('/scan', function(req, res){
   //Run the scanning function and return the results.
   console.log('Fire off a scan and return the results.');
 });
@@ -34,3 +40,5 @@ bt.post('/enable', function(req, res){
 bt.post('/disable', function(req, res){
   //Disables the bluetooth module if it isn't already.
 });
+
+module.exports = bt;
