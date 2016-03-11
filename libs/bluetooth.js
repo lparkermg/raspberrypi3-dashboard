@@ -2,12 +2,6 @@
 var express = require('express');
 var bt = express.Router();
 
-//Middleware stuffage
-bt.use(function timeLog(req,res,next){
-  console.log('Time: ', Date.now());
-  next();
-});
-
 //Main Stuff
 //Could probably do this better.
 bt.get('/', function(req, res){
