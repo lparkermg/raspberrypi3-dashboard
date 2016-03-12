@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "Dashboard for the Raspberry Pi 3",
   "homepage": "https://github.com/lparkermg/raspberrypi3-dashboard/",
-  "bugs": { "url": "https://github.com/lparkermg/raspberrypi3-dashboard/issues"},
+  "bugs": {
+    "url": "https://github.com/lparkermg/raspberrypi3-dashboard/issues"
+  },
   "license": "CC0-1.0",
   "author": "Luke Parker <lparker@moongate-uk.co.uk> (http://moongate-uk.co.uk)",
-  "dependencies" : {
-    "express": "4.13.X"
+  "dependencies": {
+    "express": "4.13.X",
+    "knockout": "^3.4.0"
   }
 }
