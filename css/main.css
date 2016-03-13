@@ -2,3 +2,8 @@
   margin-top:10px;
   margin-bottom:10px;
 }
+
+.centered{
+  margin:auto;
+  width:60%;
+}
