@@ -13,7 +13,12 @@
 <div class="container">
   <div class="row row-margin">
     <div class="col-md-12">
-      <dashboard-home></dashboard-home>
+      <!--ko if: currentPill() === "home"-->
+        <dashboard-home></dashboard-home>
+      <!--/ko-->
+      <!--ko if: currentPill() === "bluetooth"-->
+        <bluetooth-home></bluetooth-home>
+      <!--/ko-->
     </div>
   </div>
 </div>
