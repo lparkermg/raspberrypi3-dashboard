@@ -9,7 +9,12 @@ define(
       ko.components.register('bluetooth-home',{
         viewModel: { require: 'components/Modules/Bluetooth/bluetooth'},
         template: { require: 'text!components/Modules/Bluetooth/bluetooth.html'}
-      })
+      });
+
+      ko.components.register('streams-home', {
+        viewModel: { require: 'components/Modules/Streams/streams'},
+        template: { require: 'text!components/Modules/Streams/streams.html'}
+      });
 
       return function(){
         var self = this;

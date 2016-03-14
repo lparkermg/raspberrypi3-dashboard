@@ -1,8 +1,13 @@
 //Require Stuff
 var express = require('express');
+var spawn = require('child_process').spawn;
 var bt = express.Router();
 
 //Main Stuff
+bt.get('/devices', function(req, res){
+  res.end();
+});
+
 bt.get('/status', function(req, res){
   //Get the status of the bt module.
   console.log('Get the status of the bt module... Need to decide on what info to include.');
