@@ -6,14 +6,22 @@
   </div>
 </nav>
 <ul class="nav nav-pills nav-justified">
-  <li class="active"><a data-toggle="pill" href="#">Home</a></li>
-  <li class=""><a data-toggle="pill" href="#">Bluetooth</a></li>
-  <li class=""><a data-toggle="pill" href="#">Audio Streams</a></li>
+  <li class="active" data-bind="click: function(){ return changeTab('home');}"><a data-toggle="pill" href="#">Home</a></li>
+  <li class="" data-bind="click: function(){ return changeTab('bluetooth');}"><a data-toggle="pill" href="#">Bluetooth</a></li>
+  <li class="" data-bind="click: function(){ return changeTab('streams');}"><a data-toggle="pill" href="#">Audio Streams</a></li>
 </ul>
 <div class="container">
   <div class="row row-margin">
     <div class="col-md-12">
-      <dashboard-home></dashboard-home>
+      <!--ko if: currentPill() === "home"-->
+        <dashboard-home></dashboard-home>
+      <!--/ko-->
+      <!--ko if: currentPill() === "bluetooth"-->
+        <bluetooth-home></bluetooth-home>
+      <!--/ko-->
+      <!--ko if: currentPill() === "streams"-->
+        <streams-home></streams-home>
+      <!--/ko-->
     </div>
   </div>
 </div>

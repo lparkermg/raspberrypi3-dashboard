@@ -1,13 +1,10 @@
 //Require Stuff
 var express = require('express');
+var spawn = require('child_process').spawn;
 var bt = express.Router();
 
 //Main Stuff
-//Could probably do this better.
-bt.get('/', function(req, res){
-  //Load Bluetooth viewmodel.
-  console.log('BT Viewmodel will be displayed here.');
-  res.send('BT Viewmodel will be displayed here.');
+bt.get('/devices', function(req, res){
   res.end();
 });
 
