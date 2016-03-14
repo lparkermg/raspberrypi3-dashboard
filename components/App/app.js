@@ -16,11 +16,19 @@ define(
         template: { require: 'text!components/Modules/Streams/streams.html'}
       });
 
+      //Register new component template here.
+
+      //Adding a new view:
+      //1. Copy the code below.
+      //ko.components.register('sample-view', {
+      //  viewModel: { require: 'components/Modules/Sample/sample'},
+      //  template: { require: 'text!components/Modules/Sample/sample.html'}
+      //});
+      //2. Uncomment the copied code.
+      //3. Change the sample stuff to the relavent module paths.
+
       return function(){
         var self = this;
-
-        //TODO: Implement something to capture the current pill selected.
-        //Then change the shown view bassed on that.
 
         self.currentPill = ko.observable("home");
 

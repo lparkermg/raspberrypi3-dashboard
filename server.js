@@ -2,6 +2,7 @@
 var express = require('express');
 var bluetooth = require('./server/bluetooth');
 var streams = require('./server/streams');
+var status = require('./server/status');
 var path = require('path');
 
 //App Stuff.
@@ -25,6 +26,8 @@ app.use('/bluetooth', bluetooth);
 
 app.use('/streams', streams);
 
+app.use('/status', status);
+
 app.listen(PORT, function(){
-  console.log('Test listening on port 5555.');
+  console.log('Listening on port 5555.');
 });

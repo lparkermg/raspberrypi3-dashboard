@@ -12,23 +12,26 @@
       </div>
       <div class="row row-margin">
         <div class="col-md-4">
-          Pi Name: (Name will go here).
+          Pi Name: <div data-bind="text: deviceName()"></div>
         </div>
         <div class="col-md-4">
-          Space left: 30GB out of 32GB.
+          Space left: <div data-bind="text: spaceText()"></div>
         </div>
         <div class="col-md-4">
-          General Status: OK.
+          Host Uptime: <div data-bind="text: hostUpTime()"></div>
         </div>
       </div>
 
       <!--Bluetooth information-->
       <div class="row row-margin">
         <div class="col-md-4">
-          Bluetooth Active: No.
+          Bluetooth Active: <div data-bind="text: btDeviceStatus()"></div>
         </div>
         <div class="col-md-4">
-          Connected Device: None.
+          Connected Device: <div data-bind="text: connectedDevice()"></div>
+        </div>
+        <div class="col-md-4">
+          Bluetooth Connection Uptime: <div data-bind="text: btConnectionTime()"></div>
         </div>
       </div>
 
