@@ -7,8 +7,8 @@ define(
       });
 
       ko.components.register('bluetooth-home',{
-        viewModel: { require: 'components/Bluetooth/bluetooth'},
-        template: { require: 'text!components/Bluetooth/bluetooth.html'}
+        viewModel: { require: 'components/Modules/Bluetooth/bluetooth'},
+        template: { require: 'text!components/Modules/Bluetooth/bluetooth.html'}
       })
 
       return function(){
@@ -18,5 +18,9 @@ define(
         //Then change the shown view bassed on that.
 
         self.currentPill = ko.observable("home");
+
+        self.changeTab = function(tabName){
+          self.currentPill(tabName);
+        }
       };
     });

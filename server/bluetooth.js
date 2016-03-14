@@ -3,14 +3,6 @@ var express = require('express');
 var bt = express.Router();
 
 //Main Stuff
-//Could probably do this better.
-bt.get('/', function(req, res){
-  //Load Bluetooth viewmodel.
-  console.log('BT Viewmodel will be displayed here.');
-  res.send('BT Viewmodel will be displayed here.');
-  res.end();
-});
-
 bt.get('/status', function(req, res){
   //Get the status of the bt module.
   console.log('Get the status of the bt module... Need to decide on what info to include.');
