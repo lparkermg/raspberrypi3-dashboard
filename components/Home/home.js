@@ -24,6 +24,7 @@ define(['libs/knockout'],
             self.btDeviceStatus(data.btDevStatus);
             self.connectedDevice(data.connectedDevice);
             self.btConnectionTime(data.btConnTime);
+            console.log("Done...")
           } else {
             //Error on the target server.
           }
@@ -37,5 +38,6 @@ define(['libs/knockout'],
       }
 
       GrabStatusData();
+      setInterval(function(){GrabStatusData();}, 60*1000);
     };
   });
