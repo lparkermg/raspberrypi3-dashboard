@@ -11,6 +11,7 @@ app.use('/css',express.static(path.join(__dirname + '/css')));
 console.log(__dirname);
 app.use('/components',express.static(path.join(__dirname + '/components')));
 app.use('/libs',express.static(path.join(__dirname + '/libs')));
+app.use('/data', express.static(path.join(__dirname + '/data')));
 app.use('/main.js',express.static(path.join(__dirname + '/main.js')));
 
 //Config Stuff.
