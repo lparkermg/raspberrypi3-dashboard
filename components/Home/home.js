@@ -13,7 +13,7 @@ define(['libs/knockout'],
 
       function GrabStatusData(){
         var request = new XMLHttpRequest();
-        request.open('GET', '/data/status.json');
+        request.open('GET', '/status');
         request.setRequestHeader('Accept', 'application/json');
         request.onload = function(){
           if(this.status >= 200 && this.status < 400){
@@ -26,7 +26,6 @@ define(['libs/knockout'],
             self.btDeviceStatus(data.btDevStatus);
             self.connectedDevice(data.connectedDevice);
             self.btConnectionTime(data.btConnTime);
-            console.log("Done...")
           } else {
             //Error on the target server.
           }
