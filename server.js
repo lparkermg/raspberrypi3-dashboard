@@ -1,6 +1,5 @@
 //Require Stuff.
 var express = require('express');
-var bluetooth = require('./server/bluetooth');
 var streams = require('./server/streams');
 var status = require('./server/status');
 var path = require('path');
@@ -22,8 +21,6 @@ app.get('/',function (req, res){
   //Main Admin Page (Load the View)
   res.sendFile(path.join(__dirname+'/index.html'));
 });
-
-app.use('/bluetooth', bluetooth);
 
 app.use('/streams', streams);
 

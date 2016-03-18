@@ -7,7 +7,6 @@
 </nav>
 <ul class="nav nav-pills nav-justified">
   <li class="active" data-bind="click: function(){ return changeTab('home');}"><a data-toggle="pill" href="#">Home</a></li>
-  <li class="" data-bind="click: function(){ return changeTab('bluetooth');}"><a data-toggle="pill" href="#">Bluetooth</a></li>
   <li class="" data-bind="click: function(){ return changeTab('streams');}"><a data-toggle="pill" href="#">Audio Streams</a></li>
   <!--New Pill Here-->
 </ul>
@@ -16,9 +15,6 @@
     <div class="col-md-12">
       <!--ko if: currentPill() === "home"-->
         <dashboard-home></dashboard-home>
-      <!--/ko-->
-      <!--ko if: currentPill() === "bluetooth"-->
-        <bluetooth-home></bluetooth-home>
       <!--/ko-->
       <!--ko if: currentPill() === "streams"-->
         <streams-home></streams-home>
